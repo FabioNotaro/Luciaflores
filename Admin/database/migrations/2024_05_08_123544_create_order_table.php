@@ -27,6 +27,8 @@ return new class extends Migration
                 $table->string('person_message_from');
                 $table->string('person_message_to');
                 $table->text('note');
+                $table->smallInteger('payment_type');
+                $table->smallInteger('payment_status');
                 $table->dateTime('dt_created');
                 $table->integer('id_created');
                 $table->dateTime('dt_deleted');

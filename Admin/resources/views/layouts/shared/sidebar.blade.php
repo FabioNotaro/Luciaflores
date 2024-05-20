@@ -27,9 +27,33 @@
             <li class="menu-title">Menu</li>
 
             <li class="menu-item">
-                <a href="{{ route('any', 'index') }}" class="menu-link">
+                <a href="{{ route('admin') }}" class="menu-link">
                     <span class="menu-icon"><i class="mgc_home_3_line"></i></span>
                     <span class="menu-text"> Dashboard </span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="{{ url('admin/pedidos') }}" class="menu-link">
+                    <span class="menu-icon"><i class="mgc_home_3_line"></i></span>
+                    <span class="menu-text"> Pedidos </span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="{{ url('admin/produtos') }}" class="menu-link">
+                    <span class="menu-icon"><i class="mgc_home_3_line"></i></span>
+                    <span class="menu-text"> Produtos </span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="{{ url('admin/clientes') }}" class="menu-link">
+                    <span class="menu-icon"><i class="mgc_home_3_line"></i></span>
+                    <span class="menu-text"> Clientes </span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="{{ url('admin/parceiros') }}" class="menu-link">
+                    <span class="menu-icon"><i class="mgc_home_3_line"></i></span>
+                    <span class="menu-text"> Parceiros </span>
                 </a>
             </li>
 

@@ -13,12 +13,16 @@ use App\Http\Controllers\RoutingController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+/* =========== admin =========== */
 
-require __DIR__ . '/auth.php';
+Route::prefix('admin')->group(__DIR__.'/web/admin.php');
+
+/* =========== site ============ */
 
 Route::group(['prefix' => '/', 'middleware'=>'auth'], function () {
     Route::get('', [RoutingController::class, 'index'])->name('root');
     Route::get('/home', fn()=>view('index'))->name('home');
+    Route::match(['GET', 'POST'], '{pagina?}/{id?}/{extra?}/{extra2?}/{extra3?}/{extra4?}', [RoutingController::class, 'index']);
     Route::get('{first}/{second}/{third}', [RoutingController::class, 'thirdLevel'])->name('third');
     Route::get('{first}/{second}', [RoutingController::class, 'secondLevel'])->name('second');
     Route::get('{any}', [RoutingController::class, 'root'])->name('any');
