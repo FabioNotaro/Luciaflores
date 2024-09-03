@@ -4,10 +4,23 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class Dashboard extends Controller{
 
-    public static function index($id = null, $extra = null){
+    public function __construct(){
+        $currentRoute = request()->route()->getName();
+
+        if ($currentRoute !== 'login') {
+            $userLogged = Auth::guard('admin')->check();
+            if(!$userLogged){
+                redirect('admin/login')->send();
+            }
+        }
+
+    }
+
+    public function index($id = null, $extra = null){
 
         $args = [];
 
@@ -15,7 +28,7 @@ class Dashboard extends Controller{
 
     }
 
-    public static function inserir($id = null, $extra = null){
+    public function inserir($id = null, $extra = null){
 
     }
     
