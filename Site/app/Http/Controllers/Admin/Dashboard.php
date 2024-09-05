@@ -17,7 +17,7 @@ class Dashboard extends Controller{
     }
 
     public function inserir($id = null, $extra = null){
-
+        return response()->json(['message' => 'inserir function called']);
     }
     
 }

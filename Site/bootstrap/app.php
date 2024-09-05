@@ -14,10 +14,7 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        $middleware->append(TrimStrings::class);
-        $middleware->append(ConvertEmptyStringsToNull::class);
-
-        $middleware->append('auth', AdminAuth::class);
+        // 
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

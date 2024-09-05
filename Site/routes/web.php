@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Site;
 use App\Http\Controllers\Admin;
 use App\Http\Controllers\Admin\Login;
-use App\Http\Middleware\AdminAuth;
 
 Route::prefix('admin')->group(function(){
 
@@ -12,7 +11,7 @@ Route::prefix('admin')->group(function(){
     
     Route::post('login', [Login::class, 'autenticar'])->name('login');
 
-    Route::match(['GET', 'POST'], '{pagina?}/{id?}/{extra?}', [Admin::class, 'index'])->middleware([AdminAuth::class]);
+    Route::match(['GET', 'POST'], '{pagina?}/{id?}/{extra?}', [Admin::class, 'index'])->middleware('auth');
     
 });
 
