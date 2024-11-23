@@ -19,7 +19,7 @@ class Admin extends Controller{
 
         if (class_exists($controllerClass) && method_exists($controllerClass, $metodo)) {
             $controllerClass = new $controllerClass();
-            return $controllerClass->index($id, $extra);
+            return $controllerClass->index($request, $id, $extra);
         }
 
         abort(404);

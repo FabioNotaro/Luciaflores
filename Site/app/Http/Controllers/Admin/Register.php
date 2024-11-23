@@ -9,17 +9,9 @@ class Register extends Controller
 {
 
     public function index(Request $request){
-******
-        // $usuarioLogado = Auth::guard('admin')->check();
-        // if($usuarioLogado){
-        //     redirect('admin/dashboard')->send();
-        // }
-
         $args = [];
-        // $args['title'] = 'Lucia Flores - Floricultura';
-        // $args['msg'] = false;
-
-        return view('admin/register', ['pagina' => 'login', 'args' => $args]);
+        return view('admin/register', ['pagina' => 'register', 'args' => $args]);
 
     }
+
 }

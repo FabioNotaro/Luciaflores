@@ -8,16 +8,13 @@ use Illuminate\Support\Facades\Auth;
 
 class Dashboard extends Controller{
 
-    public function index($id = null, $extra = null){
+    public function index(Request $request){
 
         $args = [];
 
-        return view('admin/admin', ['pagina' => 'dashboard', 'args' => $args]);
+        return view('admin', ['pagina' => 'dashboard', 'args' => $args]);
 
     }
 
-    public function inserir($id = null, $extra = null){
-        return response()->json(['message' => 'inserir function called']);
-    }
     
 }

@@ -14,16 +14,16 @@ class Login extends Controller {
 
     public function index(Request $request){
 
-        // $usuarioLogado = Auth::guard('admin')->check();
-        // if($usuarioLogado){
-        //     redirect('admin/dashboard')->send();
-        // }
+        $loggedUser = Auth::guard('admin')->check();
+        if($loggedUser){
+            redirect('admin/dashboard')->send();
+        }
 
         $args = [];
-        // $args['title'] = 'Lucia Flores - Floricultura';
-        // $args['msg'] = false;
+        $args['title'] = 'Lucia Flores - Floricultura';
+        $args['msg'] = false;
 
-        return view('admin/login', ['pagina' => 'login', 'args' => $args]);
+        return view('admin', ['pagina' => 'login', 'args' => $args]);
 
     }
 
