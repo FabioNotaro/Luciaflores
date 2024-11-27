@@ -13,9 +13,4 @@ class Register extends Controller
         return view('admin/register', ['pagina' => 'register', 'args' => $args]);
 
     }
-
-    public function store(Request $request){
-        dd($request->all());
-    }
-
 }
