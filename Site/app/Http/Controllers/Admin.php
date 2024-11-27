@@ -13,7 +13,7 @@ class Admin extends Controller{
     public function index(Request $request, $id = null, $extra = null){
 
         $pagina = $request->route('pagina', 'dashboard');
-        $metodo = $request->isMethod('post') ? 'inserir' : 'index';
+        $metodo = $request->isMethod('post') ? 'store' : 'index';
 
         $controllerClass = "App\\Http\\Controllers\\Admin\\" . ucfirst($pagina);
 

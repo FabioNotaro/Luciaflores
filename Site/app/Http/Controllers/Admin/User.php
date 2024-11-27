@@ -12,7 +12,7 @@ class User extends Controller{
     }
 
     public function store(Request $request){
-        dd($request);
+        dd($request->all());
     }
 
     public function edit($id){

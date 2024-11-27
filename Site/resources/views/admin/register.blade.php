@@ -50,7 +50,7 @@
                         <div class="row align-items-center justify-content-center">
                         <div class="col-md-7">
                             <h3><strong>Cadastro Usuario</strong></h3>
-                            <form action="" method="post" autocomplete="off">
+                            <form action="/admin/register" method="POST" autocomplete="off">
                                 @csrf
                                 <div class="form-group first">
                                     <label for="name">Nome</label>
