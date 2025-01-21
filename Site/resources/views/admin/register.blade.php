@@ -65,8 +65,8 @@
                                     <input type="password" class="form-control" placeholder="Digite sua Senha" name="password">
                                 </div>
                                 <div class="form-group last mb-3">
-                                    <label for="confirme_pass">Confirmação de Senha</label>
-                                    <input type="confirme_password" class="form-control" placeholder="Confirme sua Senha" name="confirme_password">
+                                    <label for="confirme_password">Confirmação de Senha</label>
+                                    <input type="password" class="form-control" placeholder="Confirme sua Senha" name="confirme_password">
                                 </div>
 
                                 <input type="submit" value="Entrar" class="btn btn-block btn-primary">
