@@ -11,7 +11,7 @@ Route::prefix('admin')->group(function(){
 
     Route::get('login', [Login_admin::class, 'index'])->name('login');
     
-    Route::post('login', [Login_admin::class, 'autenticar'])->name('login');
+    Route::post('login', [Login_admin::class, 'authenticate'])->name('login');
 
     Route::match(['GET', 'POST'], '{pagina?}/{id?}/{extra?}', [Admin::class, 'index']);
     

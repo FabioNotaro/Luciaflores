@@ -27,7 +27,7 @@ class Login extends Controller {
 
     }
 
-    public function autenticar(Request $request){
+    public function authenticate(Request $request){
 
         $request->validate([
             'email'    => ['required'],
