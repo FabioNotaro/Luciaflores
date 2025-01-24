@@ -1,10 +1,6 @@
-
-
       <div class="container">
         <div class="page-inner">
-          <div
-            class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4"
-          >
+          <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4">
             <div>
               <h3 class="fw-bold mb-3">Dashboard</h3>
               <h6 class="op-7 mb-2">Gerenciamento Lucia Flores</h6>
@@ -20,9 +16,7 @@
                 <div class="card-body">
                   <div class="row align-items-center">
                     <div class="col-icon">
-                      <div
-                        class="icon-big text-center icon-primary bubble-shadow-small"
-                      >
+                      <div class="icon-big text-center icon-primary bubble-shadow-small">
                         <i class="fas fa-users"></i>
                       </div>
                     </div>
@@ -41,9 +35,7 @@
                 <div class="card-body">
                   <div class="row align-items-center">
                     <div class="col-icon">
-                      <div
-                        class="icon-big text-center icon-info bubble-shadow-small"
-                      >
+                      <div class="icon-big text-center icon-info bubble-shadow-small">
                         <i class="fas fa-user-check"></i>
                       </div>
                     </div>
@@ -62,9 +54,7 @@
                 <div class="card-body">
                   <div class="row align-items-center">
                     <div class="col-icon">
-                      <div
-                        class="icon-big text-center icon-success bubble-shadow-small"
-                      >
+                      <div class="icon-big text-center icon-success bubble-shadow-small">
                         <i class="fas fa-luggage-cart"></i>
                       </div>
                     </div>
@@ -83,9 +73,7 @@
                 <div class="card-body">
                   <div class="row align-items-center">
                     <div class="col-icon">
-                      <div
-                        class="icon-big text-center icon-secondary bubble-shadow-small"
-                      >
+                      <div class="icon-big text-center icon-secondary bubble-shadow-small">
                         <i class="far fa-check-circle"></i>
                       </div>
                     </div>
@@ -107,10 +95,7 @@
                   <div class="card-head-row">
                     <div class="card-title">User Statistics</div>
                     <div class="card-tools">
-                      <a
-                        href="#"
-                        class="btn btn-label-success btn-round btn-sm me-2"
-                      >
+                      <a href="#" class="btn btn-label-success btn-round btn-sm me-2">
                         <span class="btn-label">
                           <i class="fa fa-pencil"></i>
                         </span>
