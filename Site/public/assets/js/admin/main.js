@@ -1,14 +1,14 @@
-$(function() {
+	
 
-    $('.btn-link[aria-expanded="true"]').closest('.accordion-item').addClass('active');
-  $('.collapse').on('show.bs.collapse', function () {
-	  $(this).closest('.accordion-item').addClass('active');
+$(window).on('load', function (e) {
+	$("#basic-datatables").DataTable({
+		language: {
+			url: '//cdn.datatables.net/plug-ins/2.2.1/i18n/pt-BR.json',
+		},
 	});
-
-  $('.collapse').on('hidden.bs.collapse', function () {
-	  $(this).closest('.accordion-item').removeClass('active');
-	});
-
-    
-
 });
+
+// $('.nav-secondary').on('click', 'li', function() {
+// 	$('.nav-secondary li.active').removeClass('active');
+// 	$(this).addClass('active');
+// });
