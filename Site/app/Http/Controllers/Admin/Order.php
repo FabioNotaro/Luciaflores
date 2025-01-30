@@ -14,6 +14,7 @@ class Order extends Controller{
         $orders = [
             [
                 'id' => '01',
+                'order_number' => '000001',
                 'name' => 'Carlos',
                 'product' => 'Buque de 12 Rosas com Trigo',
                 'receiver' => 'Andrea',
@@ -22,6 +23,7 @@ class Order extends Controller{
             ],
             [
                 'id' => '02',
+                'order_number' => '000002',
                 'name' => 'Marcos',
                 'product' => 'Buque de 6 girassóis',
                 'receiver' => 'Paula',
@@ -30,6 +32,7 @@ class Order extends Controller{
             ],
             [
                 'id' => '03',
+                'order_number' => '000003',
                 'name' => 'Julio',
                 'product' => 'Buque Van Gohg',
                 'receiver' => 'Carla',
@@ -38,6 +41,7 @@ class Order extends Controller{
             ],
             [
                 'id' => '04',
+                'order_number' => '000004',
                 'name' => 'Alessandro',
                 'product' => 'Mini Buque de Rosas',
                 'receiver' => 'Bianca',
@@ -50,6 +54,10 @@ class Order extends Controller{
 
         return view('admin', ['pagina' => 'order', 'args' => $args]);
 
+    }
+
+    public function store(Request $request){
+        dd($request);
     }
 
 }

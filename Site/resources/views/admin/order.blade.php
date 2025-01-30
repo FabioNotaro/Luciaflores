@@ -16,7 +16,7 @@
             <a class="link-disabled" href="#">Pedidos</a>
           </li>
         </ul>
-        <div class="add-button">
+        <div title="Novo Pedido" class="add-button" data-bs-toggle="modal" data-bs-target="#modalPedido">
             <i class="fas fa-plus-circle"></i>
         </div>
       </div>
@@ -31,6 +31,7 @@
                 <table id="basic-datatables" class="display table table-striped table-hover">
                   <thead>
                     <tr>
+                      <th>Nº Pedido</th>
                       <th>Nome</th>
                       <th>Produto</th>
                       <th>Destinatario</th>
@@ -41,6 +42,7 @@
                   </thead>
                   <tfoot>
                     <tr>
+                      <th>Nº Pedido</th>
                       <th>Nome</th>
                       <th>Produto</th>
                       <th>Destinatario</th>
@@ -52,6 +54,7 @@
                   <tbody>
                     @foreach ($orders as $order) 
                     <tr>
+                        <td>{{ $order['order_number'] }}</td>
                         <td>{{ $order['name'] }}</td>
                         <td>{{ $order['product'] }}</td>
                         <td>{{ $order['receiver'] }}</td>
@@ -78,6 +81,7 @@
                 <table id="basic-datatables" class="display table table-striped table-hover">
                   <thead>
                     <tr>
+                      <th>Nº Pedido</th>
                       <th>Nome</th>
                       <th>Produto</th>
                       <th>Destinatario</th>
@@ -88,6 +92,7 @@
                   </thead>
                   <tfoot>
                     <tr>
+                      <th>Nº Pedido</th>
                       <th>Nome</th>
                       <th>Produto</th>
                       <th>Destinatario</th>
@@ -99,6 +104,7 @@
                   <tbody>
                     @foreach ($orders as $order) 
                     <tr>
+                        <td>{{ $order['order_number'] }}</td>
                         <td>{{ $order['name'] }}</td>
                         <td>{{ $order['product'] }}</td>
                         <td>{{ $order['receiver'] }}</td>
@@ -116,3 +122,5 @@
       </div>
     </div>
   </div>
+
+  @include('admin.components.modal-pedido')
