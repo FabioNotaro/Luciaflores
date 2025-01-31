@@ -12,53 +12,98 @@
             @csrf
             <div class="col-md-6">
               <label for="validationCliente" class="form-label">Cliente:</label>
-              <input type="text" class="form-control" name="customer" id="validationCliente" value="" required>
+              <input type="text" class="form-control" name="customer" placeholder="Digite o nome do Cliente!" id="validationCliente" required>
               <div class="invalid-feedback">
                 Por favor, insira o nome do cliente!
               </div>
             </div>
             <div class="col-md-6">
               <label for="validationTel" class="form-label">Telefone:</label>
-              <input type="text" class="form-control"name="tel" id="validationTel" value="" required>
+              <input type="text" class="form-control" name="customer_tel" id="validationTel" placeholder="Digite o telefone do Cliente!" required>
               <div class="invalid-feedback">
                 Por favor, insira o telefone do cliente!
               </div>
             </div>
-            <div class="col-md-12">
-              <label for="product" class="form-label">Produto:</label>
-              <input type="text" class="form-control"name="product" id="product" value="" required>
+            <div class="col-md-8">
+              <label for="produto" class="form-label">Produto:</label>
+              <input type="text" class="form-control"name="product" id="produto" placeholder="Digite o Produto!" required>
               <div class="invalid-feedback">
-                Por favor, insira o produto!
+                Por favor, insira o produto e seus detalhes!
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="valor" class="form-label">Valor:</label>
+              <input type="number" class="form-control"name="value" id="valor" placeholder="Digite o valor do produto!" required>
+              <div class="invalid-feedback">
+                Por favor, insira o valor do produto!
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="tipoPag" class="form-label">Forma de Pagamento:</label>
+              <select class="form-select" id="tipoPag" name="payment_type" required>
+                <option selected disabled value="">Selecione a forma de pagamento...</option>
+                <option value="1">Dinheiro</option>
+                <option value="2">Pix</option>
+                <option value="3">Cartão Débito</option>
+                <option value="4">Cartão Crédito</option>
+              </select>
+              <div class="invalid-feedback">
+                Por favor, selecione a forma de pagamento.
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="statusPag" class="form-label">Status do Pagamento:</label>
+              <select class="form-select" id="statusPag" name="payment_status" required>
+                <option selected disabled value="">Selecione a forma de pagamento...</option>
+                <option value="1">Aguardando Pagamento</option>
+                <option value="2">Pagamento Confirmado</option>
+              </select>
+              <div class="invalid-feedback">
+                Por favor, selecione o status de pagamento.
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="dataEntrega" class="form-label">Data da Entrega:</label>
+              <input type="date" class="form-control" name="dt_order" id="dataEntrega" required>
+              <div class="invalid-feedback">
+                Por favor, insira a Data da Entrega!
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="horarioEntrega" class="form-label">Horario da Entrega:</label>
+              <input type="time" class="form-control" name="time_order" id="horarioEntrega" required>
+              <div class="invalid-feedback">
+                Por favor, insira o Horário da Entrega!
               </div>
             </div>
             <div class="col-md-6">
               <label for="validationReceiver" class="form-label">Destinatário:</label>
-              <input type="text" class="form-control" name="receiver" id="validationReceiver" value="" required>
+              <input type="text" class="form-control" name="receiver" id="validationReceiver" placeholder="Digite o destinatário de entrega!" required>
               <div class="invalid-feedback">
                 Por favor, insira o destinatário!
               </div>
             </div>
             <div class="col-md-6">
-              <label for="validationReceiver" class="form-label">Telefone do Destinatário:</label>
-              <input type="text" class="form-control" name="tel_receiver" id="validationReceiver" value="" required>
+              <label for="validationTelReceiver" class="form-label">Telefone do Destinatário:</label>
+              <input type="text" class="form-control" name="tel_receiver" id="validationTelReceiver" placeholder="Digite o telefone do destinatário!" required>
               <div class="invalid-feedback">
                 Por favor, insira o telefone do destinatário!
               </div>
             </div>
             <div class="col-md-6">
-              <label for="validationTelReceiver" class="form-label">Endereço</label>
-              <input type="text" class="form-control" name="address" id="validationTelReceiver" required>
+              <label for="validationAddress" class="form-label">Endereço</label>
+              <input type="text" class="form-control" name="address" id="validationAddress" placeholder="Digite o endereço do destinatário!" required>
               <div class="invalid-feedback">
-                Por favor, insira o telefone do destinatário!
+                Por favor, insira o endereço do destinatário!
               </div>
             </div>
             <div class="col-md-6">
-              <label for="address_complement" class="form-label">Complemento</label>
-              <input type="text" class="form-control" name="address_complement" id="address_complement">
+              <label for="validationAddressComp" class="form-label">Complemento</label>
+              <input type="text" class="form-control" name="address_complement" id="validationAddressComp" placeholder="Digite o complemento do endereço!">
             </div>
             <div class="col-md-12">
-              <label for="message" class="form-label">Mensagem</label>
-              <textarea class="form-control" name="message" id="message"></textarea>
+              <label for="mensagem" class="form-label">Mensagem</label>
+              <textarea class="form-control" name="message" id="mensagem"></textarea>
             </div>
             <div class="col-12">
               <button class="btn btn-primary" type="submit">Salvar</button>

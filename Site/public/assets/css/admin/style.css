@@ -23,3 +23,8 @@
 .add-button:hover{
     color: rgb(0, 99, 0);
 }
+
+.form-label{
+    color: #333 !important;
+    font-weight: bold !important;
+}

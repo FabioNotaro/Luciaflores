@@ -55,11 +55,11 @@
                     @foreach ($orders as $order) 
                     <tr>
                         <td>{{ $order['order_number'] }}</td>
-                        <td>{{ $order['name'] }}</td>
+                        <td>{{ $order['customer'] }}</td>
                         <td>{{ $order['product'] }}</td>
                         <td>{{ $order['receiver'] }}</td>
                         <td>{{ $order['value'] }}</td>
-                        <td>{{ $order['status'] }}</td>
+                        <td>{{ $paymentStatus[$order['payment_status']] }}</td>
                         <td>xxx</td>
                       </tr>
                     @endforeach
