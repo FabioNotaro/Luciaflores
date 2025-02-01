@@ -46,6 +46,7 @@
                 <option value="2">Pix</option>
                 <option value="3">Cartão Débito</option>
                 <option value="4">Cartão Crédito</option>
+                <option value="5">Link de Pagamento</option>
               </select>
               <div class="invalid-feedback">
                 Por favor, selecione a forma de pagamento.
@@ -63,47 +64,60 @@
               </div>
             </div>
             <div class="col-md-6">
-              <label for="dataEntrega" class="form-label">Data da Entrega:</label>
+              <label for="dataEntrega" class="form-label">Data do Pedido:</label>
               <input type="date" class="form-control" name="dt_order" id="dataEntrega" required>
               <div class="invalid-feedback">
-                Por favor, insira a Data da Entrega!
+                Por favor, insira a Data do Pedido!
               </div>
             </div>
             <div class="col-md-6">
-              <label for="horarioEntrega" class="form-label">Horario da Entrega:</label>
+              <label for="horarioEntrega" class="form-label">Horario do Pedido:</label>
               <input type="time" class="form-control" name="time_order" id="horarioEntrega" required>
               <div class="invalid-feedback">
-                Por favor, insira o Horário da Entrega!
+                Por favor, insira o Horário do Pedido!
               </div>
             </div>
             <div class="col-md-6">
-              <label for="validationReceiver" class="form-label">Destinatário:</label>
-              <input type="text" class="form-control" name="receiver" id="validationReceiver" placeholder="Digite o destinatário de entrega!" required>
-              <div class="invalid-feedback">
-                Por favor, insira o destinatário!
+              <div class="form-check">
+                <input class="form-check-input order-delivery" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Pedido para entrega
+                </label>
               </div>
             </div>
-            <div class="col-md-6">
-              <label for="validationTelReceiver" class="form-label">Telefone do Destinatário:</label>
-              <input type="text" class="form-control" name="tel_receiver" id="validationTelReceiver" placeholder="Digite o telefone do destinatário!" required>
-              <div class="invalid-feedback">
-                Por favor, insira o telefone do destinatário!
+            <div class="content-delivery">      
+              <div class="row">   
+                <div class="col-md-6">
+                  <label for="validationReceiver" class="form-label">Destinatário:</label>
+                  <input type="text" class="form-control" name="receiver" id="validationReceiver" placeholder="Digite o destinatário de entrega!">
+                  <div class="invalid-feedback">
+                    Por favor, insira o destinatário!
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationTelReceiver" class="form-label">Telefone do Destinatário:</label>
+                  <input type="text" class="form-control" name="tel_receiver" id="validationTelReceiver" placeholder="Digite o telefone do destinatário!">
+                  <div class="invalid-feedback">
+                    Por favor, insira o telefone do destinatário!
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationAddress" class="form-label">Endereço</label>
+                  <input type="text" class="form-control" name="address" id="validationAddress" placeholder="Digite o endereço do destinatário!">
+                  <div class="invalid-feedback">
+                    Por favor, insira o endereço do destinatário!
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationAddressComp" class="form-label">Complemento</label>
+                  <input type="text" class="form-control" name="address_complement" id="validationAddressComp" placeholder="Digite o complemento do endereço!">
+                </div>
+                <div class="col-md-12">
+                  <label for="mensagem" class="form-label">Mensagem</label>
+                  <textarea class="form-control" name="message" id="mensagem"></textarea>
+                </div>
               </div>
-            </div>
-            <div class="col-md-6">
-              <label for="validationAddress" class="form-label">Endereço</label>
-              <input type="text" class="form-control" name="address" id="validationAddress" placeholder="Digite o endereço do destinatário!" required>
-              <div class="invalid-feedback">
-                Por favor, insira o endereço do destinatário!
-              </div>
-            </div>
-            <div class="col-md-6">
-              <label for="validationAddressComp" class="form-label">Complemento</label>
-              <input type="text" class="form-control" name="address_complement" id="validationAddressComp" placeholder="Digite o complemento do endereço!">
-            </div>
-            <div class="col-md-12">
-              <label for="mensagem" class="form-label">Mensagem</label>
-              <textarea class="form-control" name="message" id="mensagem"></textarea>
+
             </div>
             <div class="col-12">
               <button class="btn btn-primary" type="submit">Salvar</button>

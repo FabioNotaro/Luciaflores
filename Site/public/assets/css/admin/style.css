@@ -28,3 +28,7 @@
     color: #333 !important;
     font-weight: bold !important;
 }
+
+.content-delivery{
+    display: none;
+}

@@ -31,4 +31,13 @@ $(window).on('load', function (e) {
 	  });
   })();
 
-  
+  $(document).on('change', '.order-delivery', function(e){
+
+	let content_delivery = $('.content-delivery');
+	console.log(content_delivery);
+	if($(this).prop('checked')){
+		content_delivery.show();
+	}else{
+		content_delivery.hide();
+	};
+  });

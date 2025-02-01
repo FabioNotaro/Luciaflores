@@ -16,11 +16,19 @@ class Order extends Controller{
             '1' => 'Aguardando Pagamento',
             '2' => 'Pagamento Confirmado'
         ];
+        $paymentType = [
+            '1' => 'Dinheiro',
+            '2' => 'Pix',
+            '3' => 'Cartão de Débito',
+            '4' => 'Cartão de Crédito',
+            '5' => 'Link de Pagamento'
+        ];
 
         $orders = $order->get();
 
-        $args['orders'] = $orders;
+        $args['orders']        = $orders;
         $args['paymentStatus'] = $paymentStatus;
+        $args['paymentType']   = $paymentType;
 
         return view('admin', ['pagina' => 'order', 'args' => $args]);
 
@@ -36,7 +44,7 @@ class Order extends Controller{
 
         $orderNumber = $order->max('order_number');
         $orderNumber = !$orderNumber ? $orderNumberBase : $orderNumber + 1;
-        $dataOrders['order_number'] = $orderNumber;
+        $dataOrders['order_number'] = str_pad($orderNumber, 6, '0', STR_PAD_LEFT);
 
         if($order->insert($dataOrders)){
             return redirect('admin/order')->send();
