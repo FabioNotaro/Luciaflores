@@ -13,14 +13,15 @@ return new class extends Migration
         if (!Schema::hasTable('orderTemporary')) {
             Schema::create('orderTemporary', function (Blueprint $table) {
                 $table->increments('id');
-                $table->integer('order_number')->unique()->nullable()->default('000000');
+                $table->string('order_number');
                 $table->string('customer');
                 $table->string('customer_tel');
                 $table->string('product');
+                $table->decimal('value', 5, 2);
                 $table->smallInteger('payment_type');
                 $table->smallInteger('payment_status');
-                $table->dateTime('dt_order');
-                $table->integer('time_order');
+                $table->date('dt_order');
+                $table->time('time_order');
                 $table->string('receiver');
                 $table->string('tel_receiver');
                 $table->text('address');
