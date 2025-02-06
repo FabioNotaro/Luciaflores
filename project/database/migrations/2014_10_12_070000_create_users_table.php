@@ -11,10 +11,10 @@ return new class extends Migration
      */
     
      public function up(){
-         // Criação da tabela 'users' (se não existir)
+
          if (!Schema::hasTable('users')) {
              Schema::create('users', function (Blueprint $table) {
-                 $table->id();  // 'id' como unsignedBigInteger (auto-increment)
+                 $table->id();
                  $table->string('name');
                  $table->string('email')->unique();
                  $table->timestamp('email_verified_at')->nullable();
@@ -23,13 +23,13 @@ return new class extends Migration
                  $table->timestamps();
              });
          }
-     
-         // Criação da tabela 'sessions' (se não existir)
+
          Schema::dropIfExists('sessions');
          if (!Schema::hasTable('sessions')) {
              Schema::create('sessions', function (Blueprint $table) {
-                 $table->string('id', 191)->primary(); // A chave primária
-                 $table->foreignId('user_id')->constrained('users', 'id')->onDelete('cascade'); // Definindo a chave estrangeira corretamente
+                 $table->string('id', 191)->primary();
+                 $table->unsignedBigInteger('user_id');
+                 $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
                  $table->string('ip_address', 45)->nullable();
                  $table->text('user_agent')->nullable();
                  $table->longText('payload');
@@ -44,5 +44,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('users');
+        Schema::dropIfExists('sessions');
     }
 };
