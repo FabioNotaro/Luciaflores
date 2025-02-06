@@ -55,12 +55,7 @@
     
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link rel="stylesheet" href="{{ asset('assets/css/demo.css') }}" />
-
-    @if (env('APP_ENV') === 'local')
-        <link rel="stylesheet" href="{{ asset('assets/css/admin/style.css') }}">
-    @else
-        <link rel="stylesheet" href="{{ asset('assets/css/admin/min-style.css') }}">
-    @endif    
+    <link rel="stylesheet" href="{{ asset('assets/css/admin/style.css') }}">
 </head>
 
 <body>

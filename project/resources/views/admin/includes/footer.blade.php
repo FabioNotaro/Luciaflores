@@ -48,10 +48,6 @@
     <!-- Kaiadmin JS -->
     <script src="{{ asset('assets/js/kaiadmin.min.js') }}"></script>
 
-    @if (env('APP_ENV') === 'local')
-      <script src="{{ asset('assets/js/admin/main.js') }}"></script>
-    @else
-      <script src="{{ asset('assets/js/admin/min-main.js') }}"></script>
-    @endif
+    <script src="{{ asset('assets/js/admin/main.js') }}"></script>
 </body>
 </html>
