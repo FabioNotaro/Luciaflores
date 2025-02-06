@@ -11,16 +11,6 @@ return new class extends Migration
      */
     public function up(){
         Schema::dropIfExists('sessions');
-        if (!Schema::hasTable('sessions')) {
-            Schema::create('sessions', function (Blueprint $table) {
-                $table->string('id', 191)->primary();
-                $table->foreignId('user_id')->constrained()->onDelete('cascade');
-                $table->string('ip_address', 45)->nullable();
-                $table->text('user_agent')->nullable();
-                $table->longText('payload');
-                $table->unsignedBigInteger('last_activity')->index();
-            });
-        }
         if (!Schema::hasTable('users')) {
             Schema::create('users', function (Blueprint $table) {
                 $table->increments('id');
@@ -30,6 +20,16 @@ return new class extends Migration
                 $table->string('password');
                 $table->rememberToken();
                 $table->timestamps();
+            });
+        }
+        if (!Schema::hasTable('sessions')) {
+            Schema::create('sessions', function (Blueprint $table) {
+                $table->string('id', 191)->primary();
+                $table->foreignId('user_id')->constrained()->onDelete('cascade');
+                $table->string('ip_address', 45)->nullable();
+                $table->text('user_agent')->nullable();
+                $table->longText('payload');
+                $table->unsignedBigInteger('last_activity')->index();
             });
         }
     }
