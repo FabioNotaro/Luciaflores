@@ -98,13 +98,13 @@
                 <div class="sidebar-content">
                   <ul class="nav nav-secondary">
                     <li class="nav-item {{ request()->is('admin') ? 'active' : '' }}">
-                      <a href="{{ url('admin') }}" class="collapsed" aria-expanded="false">
+                      <a href="{{ url('/admin') }}" class="collapsed" aria-expanded="false">
                         <i class="fas fa-home"></i>
                         <p>Dashboard</p>
                       </a>
                     </li>
                     <li class="nav-item {{ request()->is('admin/order') ? 'active' : '' }}">
-                      <a href="{{ url('admin/order') }}">
+                      <a href="{{ url('/admin/order') }}">
                         <i class="fas fa-shopping-cart"></i>
                         <p>Pedidos</p>
                       </a>
