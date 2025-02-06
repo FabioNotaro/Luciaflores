@@ -9,11 +9,12 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
+    
     public function up(){
-        Schema::dropIfExists('sessions');
+        // Primeiro, crie a tabela 'users'
         if (!Schema::hasTable('users')) {
             Schema::create('users', function (Blueprint $table) {
-                $table->id();
+                $table->id();  // Cria a coluna 'id' como unsignedBigInteger (auto-increment)
                 $table->string('name');
                 $table->string('email')->unique();
                 $table->timestamp('email_verified_at')->nullable();
@@ -22,10 +23,13 @@ return new class extends Migration
                 $table->timestamps();
             });
         }
+    
+        // Depois, crie a tabela 'sessions'
+        Schema::dropIfExists('sessions');
         if (!Schema::hasTable('sessions')) {
             Schema::create('sessions', function (Blueprint $table) {
                 $table->string('id', 191)->primary();
-                $table->foreignId('user_id')->constrained()->onDelete('cascade');
+                $table->foreignId('user_id')->constrained()->onDelete('cascade'); // A chave estrangeira para a tabela 'users'
                 $table->string('ip_address', 45)->nullable();
                 $table->text('user_agent')->nullable();
                 $table->longText('payload');
